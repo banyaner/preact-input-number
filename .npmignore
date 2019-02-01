@@ -1,0 +1,6 @@
+.npmignore
+.DS_Store
+node_modules/
+.idea/
+dist/
+gulpfile.js

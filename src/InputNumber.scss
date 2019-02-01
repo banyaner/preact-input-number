@@ -1,0 +1,29 @@
+@import './css/common/mixins';
+
+@include b(input-number) {
+  display: flex;
+  align-items: center;
+  input {
+    border: 0;
+    padding: 0;
+    width: 100%;
+    height: 84px;
+    font-size: 60px;
+    color: #333333;
+    @include pseudo(focus) {
+      outline: none;
+    }
+  }
+  @include e(clear-btn) {
+    paddin-right: 20px;
+    &:before {
+      display: block;
+      content: "清空";
+      font-size: 24px;
+    }
+  }
+  ::placeholder {
+    color: #dddddd;
+  }
+}
+

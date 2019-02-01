@@ -1,0 +1,62 @@
+/* normalize*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+a:active,
+a:hover,
+a:visited {
+  outline: 0;
+  text-decoration: none;
+}
+
+a,
+img {
+  -webkit-touch-callout: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* common*/
+html {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: 100%;
+  -webkit-user-select: none;
+}
+
+body {
+  position: relative;
+  margin: 0 auto;
+  width: 750px;
+  font: 28px/1.2 sans-serif;
+}
+

@@ -1,0 +1,8 @@
+{
+  "presets": [["env", { "modules": false }], "stage-2"],
+  "plugins": [
+//    "transform-runtime",
+    "syntax-dynamic-import",
+    ["transform-react-jsx", { "pragma": "h" }]
+  ]
+}

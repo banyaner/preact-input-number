@@ -1,0 +1,88 @@
+{
+  "name": "preact-input-number",
+  "version": "1.0.0",
+  "description": "preact的输入手机号码组件",
+  "proxy": {},
+  "main": "lib/InputNumber.js",
+  "author": {
+    "name": "Banyaner",
+    "email": "amy_zhjx@163.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/banyaner/preact-input-number.git"
+  },
+  "scripts": {
+    "dev": "NODE_ENV='development' webpack-dev-server --config build/webpack.dev.js",
+    "build": "webpack --config build/webpack.prod.js",
+    "lint": "eslint --ext .js,.jsx .",
+    "lint:fix": "eslint --ext .js,.jsx . --fix",
+    "transpile": "rm -rf lib && babel src -d lib && gulp sass",
+    "release": "standard-version",
+    "publish": "npm run transpile && npm run release && npm publish"
+  },
+  "peerDependencies": {
+    "preact": "^8.2.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "browserslist": [
+    "iOS >= 8",
+    "Android > 4.4"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^7.2.1",
+    "@commitlint/config-conventional": "^7.1.2",
+    "args": "^5.0.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "child-process": "^1.0.2",
+    "clean-webpack-plugin": "^1.0.0",
+    "css-loader": "^0.28.11",
+    "easeftp": "^2.0.39",
+    "eslint": "^4.1.1",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.8.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "file-loader": "^1.1.11",
+    "gulp": "4.0.0",
+    "gulp-sass": "^4.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^1.1.4",
+    "mini-css-extract-plugin": "0.5.0",
+    "node-sass": "^4.11.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-loader": "^2.1.5",
+    "postcss-plugin-px2rem": "^0.8.1",
+    "postcss-preset-env": "^5.1.0",
+    "postcss-scss": "^1.0.6",
+    "prettier": "^1.15.3",
+    "sass-loader": "^7.1.0",
+    "standard-version": "^4.4.0",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "4.28.2",
+    "webpack-bundle-analyzer": "^3.0.3",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^4.1.5",
+    "yargs": "^12.0.5"
+  },
+  "dependencies": {
+    "preact": "^8.4.2",
+    "request-animation-js": "^1.0.3"
+  }
+}

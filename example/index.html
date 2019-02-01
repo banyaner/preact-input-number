@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0,viewport-fit=cover"
+      name="viewport"
+    />
+    <title>preact模板</title>
+    <meta name="keywords" content="网易,新闻客户端" />
+    <meta name="description" content="网易" />
+    <meta name="author" content="网易" />
+    <meta name="copyright" content="网易版权所有" />
+    <meta name="format-detection" content="telephone=no,email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="full-screen" content="true" />
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="360-fullscreen" content="true" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <link rel="dns-prefetch" href="//static.ws.126.net/163/activity" />
+    <script>
+      // rem适配
+      !(function() {
+        var designWidth = 750
+        var designHeight = 1206
+        var rem = 100
+
+        function updateHtmlFontSize() {
+          var oHtml = document.getElementsByTagName('html')[0]
+          var width = oHtml.clientWidth
+          var height = oHtml.clientHeight
+          var clientWidth
+          if (width < height) {
+            clientWidth = width
+          } else {
+            clientWidth = (designWidth / designHeight) * height
+          }
+          document.documentElement.style.fontSize =
+            (100 * clientWidth) / designWidth + 'px'
+        }
+
+        document.addEventListener('DOMContentLoaded', updateHtmlFontSize, false)
+        window.addEventListener('resize', updateHtmlFontSize, false)
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- built files will be auto injected -->
+    <!--<script>-->
+      <!--// 添加移动端console-->
+      <!--;(function() {-->
+        <!--function _needConsole() {-->
+          <!--return (-->
+            <!--/(Android|BlackBerry|iPhone|iPad|iPod|IEMobile|Windows Phone|SymbianOS)/gi.test(-->
+              <!--navigator.userAgent-->
+            <!--) &&-->
+            <!--!/^wp.m.163.com/.test(window.location.host) &&-->
+            <!--!/simulator/.test(navigator.userAgent)-->
+          <!--)-->
+        <!--}-->
+
+        <!--if (_needConsole()) {-->
+          <!--var src = '//cdn.jsdelivr.net/npm/eruda'-->
+          <!--document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>')-->
+          <!--document.write('<scr' + 'ipt>eruda.init()</scr' + 'ipt>')-->
+        <!--}-->
+      <!--})()-->
+    <!--</script>-->
+  </body>
+</html>
